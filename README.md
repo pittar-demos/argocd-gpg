@@ -13,5 +13,5 @@ Remember to:
 
 An easy test is to change the "status" below then commit signed or unsigned:
 
-**Commit type:** Unsigned
+**Commit type:** Signed
 
