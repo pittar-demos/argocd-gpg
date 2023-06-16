@@ -5,4 +5,4 @@ resources:
   - petclinic-deployment.yaml
   - petclinic-service.yaml
   - petclinic-route.yaml
-  - compute-resourcequota.yaml
+  # - compute-resourcequota.yaml
