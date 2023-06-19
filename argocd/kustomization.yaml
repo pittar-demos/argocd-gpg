@@ -1,0 +1,5 @@
+namespace: openshift-gitops
+
+resources:
+  - gpg-demo-project.yaml
+  - application.yaml

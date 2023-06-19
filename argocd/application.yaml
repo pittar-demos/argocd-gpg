@@ -1,16 +1,14 @@
 kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  annotations:
-    notifications.argoproj.io/subscribe.on-sync-succeeded.rollout-app: ''
   labels:
     gitops.ownedBy: openshift-gitops
-  name: notifications-demo
+  name: gpg-demo
 spec:
   destination:
-    namespace: notifications-demo
+    namespace: petclinic-dev
     server: https://kubernetes.default.svc
-  project: default
+  project: gpg-demo
   source:
     path: overlays/dev
     repoURL: https://github.com/pittar-demos/argocd-gpg.git

@@ -1,0 +1,17 @@
+kind: AppProject
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: gpg-demo
+  namespace: openshift-gitops
+spec:
+  description: GnuPG verification
+  signatureKeys:
+  - keyID: 4E2EE331E75F21F9
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
