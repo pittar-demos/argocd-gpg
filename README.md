@@ -81,7 +81,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: gpg
-  namespace: argocd
+  namespace: openshift-gitops
 spec:
   clusterResourceWhitelist:
   - group: '*'
