@@ -4,7 +4,45 @@ A demo of Argo CD checking for commit signatures!
 
 ## Create a GPG Key
 
-If you already have a GPG key locally, you can skip this step.  Otherewise, [follow these instructions to create a new one]().
+If you already have a GPG key locally, you can skip this step.  Otherewise, create your first key!
+
+```
+gpg --gen-key
+```
+
+Next, list your keys to find the Key ID:
+
+```
+gpg --list-secret-keys --keyid-format=long
+```
+
+The result will be something like:
+
+```
+sec   rsa2048/412EE331E74F21F8 2023-06-15 [SC] [expires: 2025-06-14]
+      0CF7D7823439F9BAD06439464E2EE231E75F21F8
+uid                 [ultimate] Andrew Pitt <apitt@redhat.com>
+```
+
+The ID for your key is after `rsa2048/`, so in the example above, it would be `412EE331E74F21F8`.
+
+Next, configure git to use your key:
+
+```
+git config --global user.signingkey 412EE331E74F21F8
+```
+
+You can then sign commits by adding `-S` to your commit commend:
+
+```
+git commit -S -m "A signed commit."
+```
+
+Or (even better), make signed commits the default!
+
+```
+git config --local commit.gpgsign true
+```
 
 ## List your GPG Key and Display Public Key
 
