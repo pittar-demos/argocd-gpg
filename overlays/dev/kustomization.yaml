@@ -5,8 +5,8 @@ resources:
   - ../../base/database
   - ../../base/app
 
-commonLabels:
-  backstage.io/kubernetes-id: spring-boot
+# commonLabels:
+#   backstage.io/kubernetes-id: spring-boot
 
 images:
   - name: petclinic
