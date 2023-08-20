@@ -12,7 +12,6 @@ metadata:
     app.kubernetes.io/name: petclinic
     app.kubernetes.io/part-of: petclinic
     app.openshift.io/runtime: spring-boot
-    backstage.io/kubernetes-id: spring-backend-api
   name: petclinic
 spec:
   replicas: 1
