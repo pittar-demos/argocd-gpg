@@ -5,6 +5,9 @@ resources:
   - ../../base/database
   - ../../base/app
 
+commonLabels:
+  backstage.io/kubernetes-id: spring-backend-api
+
 images:
   - name: petclinic
     newName: quay.io/pittar/petclinic
